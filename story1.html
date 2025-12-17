@@ -5,23 +5,99 @@
   <title>अधूरी मुलाक़ात | Real Feel Cartoon</title>
   <meta name="description" content="अधूरी मुलाक़ात – एक भावुक हिंदी प्रेम कहानी">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      background:#0f0f0f;
+      font-family: "Noto Serif Devanagari", serif;
+      color:#ffffff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .story-card{
+      width:90%;
+      max-width:420px;
+      background:#1c1c1c;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 0 30px rgba(0,0,0,0.6);
+      animation:fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0; transform:translateY(20px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+
+    .back{
+      text-decoration:none;
+      color:#00ffd5;
+      font-size:14px;
+      display:inline-block;
+      margin-bottom:15px;
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:20px;
+      color:#ffd6d6;
+      font-size:26px;
+    }
+
+    .shayari{
+      font-size:18px;
+      line-height:1.9;
+      color:#eaeaea;
+      text-align:center;
+      padding:15px;
+      background:#111;
+      border-radius:15px;
+      border-left:4px solid #00ffd5;
+      margin-bottom:18px;
+    }
+
+    footer{
+      text-align:center;
+      font-size:12px;
+      color:#888;
+      margin-top:10px;
+    }
+  </style>
 </head>
+
 <body>
 
-<a href="index.html">⬅ Home</a>
+<div class="story-card">
 
-<h1>अधूरी मुलाक़ात</h1>
+  <a class="back" href="index.html">⬅ Home</a>
 
-<p>
-स्टेशन पर भीड़ थी, पर उसकी आँखें सिर्फ एक चेहरे को ढूँढ रही थीं।
-वह आई नहीं… शायद आने की ज़रूरत भी नहीं थी।
-कुछ रिश्ते मिलने से पहले ही अधूरे रह जाते हैं।
-</p>
+  <h1>अधूरी मुलाक़ात</h1>
 
-<p>
-ट्रेन की सीटी ने उसकी सोच तोड़ दी।
-वह चला गया — एक अधूरी कहानी छोड़कर।
-</p>
+  <div class="shayari">
+    स्टेशन पर भीड़ थी,<br>
+    पर उसकी आँखें सिर्फ<br>
+    एक चेहरे को ढूँढ रही थीं।<br><br>
+
+    वह आई नहीं…<br>
+    शायद आने की ज़रूरत भी नहीं थी।<br><br>
+
+    कुछ रिश्ते मिलने से पहले ही<br>
+    अधूरे रह जाते हैं।
+  </div>
+
+  <div class="shayari">
+    ट्रेन की सीटी ने उसकी सोच तोड़ दी।<br>
+    वह चला गया —<br>
+    एक अधूरी कहानी छोड़कर।
+  </div>
+
+  <footer>© 2025 | Real Feel Cartoon</footer>
+
+</div>
 
 </body>
 </html>
