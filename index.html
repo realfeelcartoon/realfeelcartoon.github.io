@@ -114,6 +114,27 @@ footer{
   color:var(--sub);
 }
 </style>
+  .story-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin:20px;
+}
+
+.story-link{
+  text-decoration:none;
+  padding:12px;
+  border-radius:10px;
+  background:#1f1f1f;
+  color:#00ffd5;
+  text-align:center;
+  font-size:18px;
+}
+
+.story-link:hover{
+  background:#00ffd5;
+  color:#000;
+}
 </head>
 
 <body>
@@ -178,27 +199,14 @@ footer{
 </div>
   <hr style="margin:30px 0;border-color:#333">
 
-.story-list{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  margin:20px;
-}
+  <h3 style="text-align:center;">📖 Stories</h3>
 
-.story-link{
-  text-decoration:none;
-  padding:12px;
-  border-radius:10px;
-  background:#1f1f1f;
-  color:#00ffd5;
-  text-align:center;
-  font-size:18px;
-}
+<div class="story-list">
+  <a href="story1.html" class="story-link">अधूरी मुलाकात</a>
+  <a href="story2.html" class="story-link">इंतज़ार</a>
+  <a href="story3.html" class="story-link">खामोश मोहब्बत</a>
+</div>
 
-.story-link:hover{
-  background:#00ffd5;
-  color:#000;
-}
 <footer>© 2025 | Real Feel Cartoon</footer>
 
 </div>
