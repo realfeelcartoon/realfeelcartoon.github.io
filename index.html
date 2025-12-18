@@ -441,6 +441,7 @@ footer{
   </a>
 </div>
 
+  <div class="shayari-box" id="shayari"></div>
     
 <footer>© 2025 | hari thaku Real Feel Cartoon</footer>
 
@@ -523,6 +524,35 @@ if(!visits){
 localStorage.setItem("visits", visits);
 document.getElementById("counter").innerText =
  "👁️ Visitors: " + visits;
+</script>
+  <script>
+const SHEET_ID = "1-4cObZost6ZhsrIJMBuGFkTiayUIHw2IUlQG0cckvco";
+const SHEET_NAME = "Sheet1"; // Sheet1 रहने दो
+const URL = `https://opensheet.elk.sh/${SHEET_ID}/${SHEET_NAME}`;
+
+let shayariIndex = 0;
+let shayariData = [];
+
+fetch(URL)
+  .then(res => res.json())
+  .then(data => {
+    // Filter only Active ones
+    shayariData = data.filter(row => row.Status == "Active")
+                      .map(row => row.Shayari);
+    showShayari();
+    setInterval(showShayari, 5000); // 5 sec auto change
+  })
+  .catch(err => {
+    document.getElementById("shayari").innerText =
+      " Shayari load nahi ho rahi 😢 ";
+  });
+
+function showShayari(){
+  if(!shayariData || shayariData.length == 0) return;
+  document.getElementById("shayari").innerText =
+    shayariData[shayariIndex];
+  shayariIndex = (shayariIndex + 1) % shayariData.length;
+}
 </script>
 </body>
 </html>
