@@ -271,6 +271,27 @@ footer{
     .download-btn:hover{
       background:#ff3b3b;
     }
+  .action-bar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 14px;
+  margin-top:8px;
+  background:#1c1c1c;
+  border-radius:12px;
+  font-size:18px;
+}
+
+.action-bar span{
+  cursor:pointer;
+  opacity:0.85;
+  transition:0.2s;
+}
+
+.action-bar span:hover{
+  opacity:1;
+  transform:scale(1.15);
+}
 </style>
 </head>
 
@@ -354,6 +375,15 @@ footer{
     मैं यहाँ तक आख़िर क्यों आ गया ?
   </div>
 
+    <div class="action-bar">
+  <span title="Copy">📋</span>
+  <span title="Listen">🔊</span>
+  <span title="Like">👍</span>
+  <span title="Dislike">👎</span>
+  <span title="Share">🔗</span>
+  <span title="More">⋯</span>
+</div>
+
   <!-- Download Button -->
   <a href="shayari-train.jpg" download class="download-btn">
     ⬇ Download Image
@@ -382,6 +412,27 @@ const shayariList=[
 "वक़्त ने सिखा दिया अकेले चलना, वरना हम भी साथ चाहते थे।"
 ];
 
+  <div class="action-bar">
+  <span title="Copy">📋</span>
+  <span title="Listen">🔊</span>
+  <span title="Like">👍</span>
+  <span title="Dislike">👎</span>
+  <span title="Share">🔗</span>
+  <span title="More">⋯</span>
+</div>
+
+  <div class="shayari-box">
+  <p>
+    स्टेशन पर भीड़ थी,  
+    पर उसकी आँखें सिर्फ एक चेहरे को ढूँढ रही थीं।
+  </p>
+
+  <div class="actions">
+    <button onclick="copyText(this)">📋</button>
+    <button onclick="shareText()">🔗</button>
+  </div>
+</div>
+  
 let i=0;
 const shayariBox=document.getElementById("shayari");
 const shareBtn=document.getElementById("shareBtn");
@@ -397,6 +448,18 @@ changeShayari();
 shareBtn.onclick=()=>{
  window.open("https://wa.me/?text="+encodeURIComponent(shayariBox.innerText));
 };
+</script>
+  <script>
+function copyText(el){
+  const text = el.parentElement.previousElementSibling.innerText;
+  navigator.clipboard.writeText(text);
+  alert("Shayari copied ✨");
+}
+
+function shareText(){
+  const text = document.querySelector(".shayari-box").innerText;
+  window.open("https://wa.me/?text=" + encodeURIComponent(text));
+}
 </script>
 <script>
 // Visitor Counter (Local)
