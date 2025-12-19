@@ -348,10 +348,8 @@ footer{
     <p style="line-height:1.8;font-size:16px">
       उसने हर रात एक ख़त लिखा,<br>
       और हर सुबह उसे जला दिया।<br><br>
-
       शब्दों में डर था,<br>
       और ख़ामोशी में मोहब्बत।<br><br>
-
       वो जानता था —<br>
       अगर भेज दिया,<br>
       तो रिश्ता बदल जाएगा।
@@ -367,7 +365,7 @@ footer{
   <span title="More">⋯</span>
 </div>
       
-  <div class="shayari-box">
+<div class="shayari-box" id="shayari"></div>
    
 <footer>© 2025 | hari thakur Real Feel Cartoon</footer>
 
@@ -381,8 +379,13 @@ function toggleMode(){
 }
   
 /* SHARE */
-shareBtn.onclick=()=>{
- window.open("https://wa.me/?text="+encodeURIComponent(shayariBox.innerText));
+<script>
+const shayariBox = document.getElementById("shayari");
+
+shareBtn.onclick = () => {
+  window.open(
+    "https://wa.me/?text=" + encodeURIComponent(shayariBox.innerText)
+  );
 };
 </script>
   <script>
