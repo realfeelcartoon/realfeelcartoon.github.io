@@ -419,21 +419,7 @@ footer{
       तो रिश्ता बदल जाएगा।
     </p>
   </div>
-
-  <!-- AUTO SHAYARI -->
-  <div class="shayari-box" id="shayari"></div>
-
-</div>
     
-    <div class="action-bar">
-  <span title="Copy">📋</span>
-  <span title="Listen">🔊</span>
-  <span title="Like">👍</span>
-  <span title="Dislike">👎</span>
-  <span title="Share">🔗</span>
-  <span title="More">⋯</span>
-</div>
-
   <!-- Download Button -->
   <a href="shayari-train.jpg" download class="download-btn">
     ⬇ Download Image
@@ -448,7 +434,7 @@ footer{
   <span title="Share">🔗</span>
   <span title="More">⋯</span>
 </div>
-
+      
   <div class="shayari-box">
   <p>
     स्टेशन पर भीड़ थी,  
@@ -471,26 +457,7 @@ footer{
 function toggleMode(){
  document.body.classList.toggle("light");
 }
-    /* AUTO SHAYARI */
-const shayariList=[
-"कुछ लोग आदत बन जाते हैं, फिर दूरी भी उन्हें भुला नहीं पाती।",
-"हमने छोड़ना सीखा नहीं, और उन्हें रुकना आता नहीं था।",
-"वो खामोश रहा, और हमने मान लिया — उसे फर्क नहीं पड़ता।",
-"मोहब्बत कम थी या किस्मत, ये आज तक समझ नहीं आया।",
-"दिल वही टूटा, जहाँ भरोसा सबसे ज़्यादा था।"
-];
-
-let i=0;
-const shayariBox=document.getElementById("shayari");
-const shareBtn=document.getElementById("shareBtn");
-
-function changeShayari(){
- shayariBox.innerText=shayariList[i];
- i=(i+1)%shayariList.length;
-}
-setInterval(changeShayari,5000);
-changeShayari();
-
+  
 /* SHARE */
 shareBtn.onclick=()=>{
  window.open("https://wa.me/?text="+encodeURIComponent(shayariBox.innerText));
